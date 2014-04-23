@@ -14,8 +14,13 @@
 /* ============================================================================================== */
 
 body {
-  font-family: serif;
+  font-family: 'Crimson Text', 'serif';
+  font-weight: 400;
+  font-style: normal;
   font-size: 100%;
+  width: 80%;
+  position:relative;
+  margin: auto;
 }
 
 p {
@@ -27,12 +32,13 @@ p {
 }
 
 strong {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 em {
   font-style: italic;
 }
+
 
 cite {
   font-style: normal;
@@ -42,21 +48,45 @@ small {
   font-size: 80%;
 }
 
-a {
-  color: blue;
+figcaption {
+  font-size: 0.9em;
+  text-align: center;
+  font-weight: 200;
+  font-style: italic;
+  line-height: 1em;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 1em;
-  line-height: 1;
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: gray;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Alegreya Sans SC', 'sans-serif';
+  font-weight: 500;
   text-rendering: optimizelegibility;
+}
+
+h1{
+  font-size: 6.845em;
+  line-height: 1;
+}
+
+h2{
+
+  font-size: 1.618em;
+  line-height: 1;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+h3{
+  font-size: 1.618em;
+  line-height: 1;
 }
 
 ul,
@@ -95,8 +125,142 @@ sub {
 /* ============================================================================================== */
 
 
+/*  SECTIONS  ============================================================================= */
+
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*  GROUPING  ============================================================================= */
 
 
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+/*  GRID COLUMN SETUP   ==================================================================== */
+
+.col {
+  display: inline-block;
+  margin: 1% 0 1% 1.6%;
+}
+
+.col:nth-child(-n+2) { margin-left: 0; } /* all browsers except IE6 and lower */
+
+
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+  .col { 
+    margin: 1% 0 1% 0%;
+  }
+}
+
+
+/*  GRID OF NINE   ============================================================================= */
+
+
+.span_9_of_9 {
+  width: 100%;
+}
+
+.span_8_of_9 {
+  width: 88.71%;
+}
+
+.span_7_of_9 {
+  width: 77.42%; 
+}
+
+.span_6_of_9 {
+  width: 66.13%; 
+}
+
+.span_5_of_9 {
+  width: 54.84%; 
+}
+
+.span_4_of_9 {
+  width: 43.55%; 
+}
+
+.span_3_of_9 {
+  width: 32.26%;
+}
+
+.span_2_of_9 {
+  width: 20.97%; 
+}
+
+.span_1_of_9 {
+  width: 9.68%; 
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+  .span_9_of_9 {
+    width: 100%; 
+  }
+  .span_8_of_9 {
+    width: 100%; 
+  }
+  .span_7_of_9 {
+    width: 100%; 
+  }
+  .span_6_of_9 {
+    width: 100%; 
+  }
+  .span_5_of_9 {
+    width: 100%; 
+  }
+  .span_4_of_9 {
+    width: 100%; 
+  }
+  .span_3_of_9 {
+    width: 100%; 
+  }
+  .span_2_of_9 {
+    width: 100%; 
+  }
+  .span_1_of_9 {
+    width: 100%; 
+  }
+}
+
+header {
+  margin-left: 1.6%;
+}
+
+.table-of-contents {
+  position:fixed;
+  margin: 1% 0 ;
+  width: 16.776%;
+}
+
+.table-of-contents h2 {
+  border: 0;
+}
+
+figure {
+  margin-bottom: 5%;
+}
+
+img {
+  width: 90%;
+  max-width: 90%;
+}
 
 /* Clearfix class =============================================================================== */
 .clearfix { *zoom: 1; }
