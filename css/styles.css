@@ -20,15 +20,18 @@ body {
   font-size: 100%;
   width: 80%;
   position:relative;
-  margin: auto;
+  margin: 1.618em auto;
+  max-width: 62.5em;
 }
 
 p {
   line-height: 1.5;
+  padding: .618em 0;
   -webkit-hyphens: auto;
      -moz-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
+
 }
 
 strong {
@@ -41,7 +44,8 @@ em {
 
 
 cite {
-  font-style: normal;
+  font-style: italic;
+  color: #A0927E;
 }
 
 small {
@@ -57,12 +61,12 @@ figcaption {
 }
 
 a {
-  color: blue;
+  color: #A0927E;
   text-decoration: none;
 }
 
 a:hover {
-  color: gray;
+  color: #CF756E;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -73,20 +77,22 @@ h1, h2, h3, h4, h5, h6 {
 
 h1{
   font-size: 6.845em;
-  line-height: 1;
+  line-height: 0.8em;
+  text-indent: -0.08em;
 }
 
 h2{
-
-  font-size: 1.618em;
+  font-size: 2.618em;
   line-height: 1;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
+  background: #F0ECDA;
+  text-indent: 0.618em;
 }
 
 h3{
   font-size: 1.618em;
-  line-height: 1;
+  padding-top: 1.618%;
 }
 
 ul,
@@ -129,8 +135,8 @@ sub {
 
 .section {
   clear: both;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0 0 1% 0;
 }
 
 /*  GROUPING  ============================================================================= */
@@ -150,21 +156,18 @@ sub {
 
 /*  GRID COLUMN SETUP   ==================================================================== */
 
-.col {
-  display: inline-block;
+.pics {
+  float: right;
+  display: block;
   margin: 1% 0 1% 1.6%;
 }
 
-.col:nth-child(-n+2) { margin-left: 0; } /* all browsers except IE6 and lower */
-
-
-/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
-
-@media only screen and (max-width: 480px) {
-  .col { 
-    margin: 1% 0 1% 0%;
-  }
+.col {
+  display: inline-block;
+  margin: 1% 0 0 1.6%;
 }
+
+.col:nth-child(-n+2) { margin-left: 0; } /* all browsers except IE6 and lower */
 
 
 /*  GRID OF NINE   ============================================================================= */
@@ -206,10 +209,140 @@ sub {
   width: 9.68%; 
 }
 
+header {
+  position: absolute;
+  top: 2%;
+  left: 43.55%;
+}
 
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+#introduction {
+  padding-bottom: 2.618em;
+}
 
-@media only screen and (max-width: 480px) {
+#introduction img{
+  padding-left: 0;
+}
+
+.table-of-contents {
+  position:fixed;
+  margin: 1% 0 ;
+  width: 16.776%;
+  max-width: 14.125em;
+}
+
+.table-of-contents h2 {
+  border: 0;
+  font-size: 1.618em;
+  background: none;
+}
+
+figure {
+  margin-bottom: 5%;
+}
+
+img {
+  width: 90%;
+  padding-left: 10%;
+}
+
+
+/*  BREAK FOR HEADER */
+@media only screen and (max-width: 1100px) {
+  header {
+    top: 0;
+    margin-top:1%;
+  }
+}
+
+/*  BREAK FOR TABLE OF CONTENTS */
+@media only screen and (max-width: 980px) {
+
+  ul {
+    margin-left: 8%;
+  }
+
+  #introduction {
+    padding-bottom: 0;
+  }
+
+  #introduction .span_4_of_9 {
+    margin-left: 8em;
+    width: 20em;
+  }
+
+  #introduction img {
+    width: 100%;
+  }
+
+  #introduction .span_5_of_9 {
+    margin: 1.618em auto;
+    width: 100%;
+    float: none;
+  }
+
+  header {
+    /* Abs positioning makes it not take up vert space */ 
+    position: absolute;
+    top: 24em;
+    left: 0;
+
+    /* Rotate header from top left corner (not default) */
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin:    0 0;
+    -ms-transform-origin:     0 0;
+    -o-transform-origin:      0 0;
+    
+    -webkit-transform: rotate(270deg); 
+    -moz-transform:    rotate(270deg); 
+    -ms-transform:     rotate(270deg); 
+    -o-transform:      rotate(270deg); 
+  }
+
+  .table-of-contents {
+    position: relative;
+    min-width: 100%;
+  }
+
+  .table-of-contents h2{
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    margin-bottom: 1.6%;
+    background: #F0ECDA;
+  }
+
+  .span_7_of_9 {
+    width: 100%;
+    margin: 0 auto auto 0 ;
+  }
+
+  .span_8_of_9 {
+    width: 95%; 
+  }
+
+  .span_5_of_9 {
+    width: 60%; 
+  }
+
+  .span_3_of_9 {
+    width: 40%; 
+  }
+
+  .span_2_of_9 {
+    margin: 0;
+  }
+
+  .span_1_of_9 {
+    width: 5%; 
+  }
+
+}
+
+@media only screen and (max-width: 743px) {
+
+  body {
+    width: 95%;
+  }
+
   .span_9_of_9 {
     width: 100%; 
   }
@@ -229,7 +362,7 @@ sub {
     width: 100%; 
   }
   .span_3_of_9 {
-    width: 100%; 
+    width: 35%;
   }
   .span_2_of_9 {
     width: 100%; 
@@ -239,27 +372,71 @@ sub {
   }
 }
 
-header {
-  margin-left: 1.6%;
-}
+@media only screen and (max-width: 480px) {
 
-.table-of-contents {
-  position:fixed;
-  margin: 1% 0 ;
-  width: 16.776%;
-}
+  .col {
+    display: block;
+  }
 
-.table-of-contents h2 {
-  border: 0;
-}
+  .pics {
+    float: none;
+    margin-left: 0;
+  }
 
-figure {
-  margin-bottom: 5%;
-}
+  #introduction .span_4_of_9 {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    position: relative;
+    margin: auto;
+  }
 
-img {
-  width: 90%;
-  max-width: 90%;
+  #introduction .span_5_of_9 {
+    margin: 0;
+  }
+
+  header {
+    /* Abs positioning makes it not take up vert space */ 
+    position: relative;
+    text-align: center;
+    top: auto;
+    left: auto;
+    padding: 1em 0;
+
+    /* Rotate header from top left corner (not default) */
+    -webkit-transform-origin: auto auto;
+    -moz-transform-origin:    auto auto;
+    -ms-transform-origin:     auto auto;
+    -o-transform-origin:      auto auto;
+    
+    -webkit-transform: rotate(0deg); 
+    -moz-transform:    rotate(0deg); 
+    -ms-transform:     rotate(0deg); 
+    -o-transform:      rotate(0deg); 
+  }
+
+
+  figure {
+    max-width: 25em;
+    display: block;
+    position: relative;
+    margin: auto;
+    padding: 1.6% 0;
+  }
+
+ /* #introduction figure {
+    padding: 1em 0;
+  }*/
+
+  img {
+    width:100%;
+    padding:0;
+  }
+
+  .span_3_of_9 {
+    width: 100%;
+  }
+
 }
 
 /* Clearfix class =============================================================================== */
