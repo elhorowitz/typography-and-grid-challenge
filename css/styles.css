@@ -98,7 +98,7 @@ h3{
 
 ul,
 ol {
-  padding: 0;
+  padding: .618em 0;
   margin: 0 0 0 1em;
 }
 
@@ -109,6 +109,14 @@ ol ul {
 
 li {
   line-height: 1.5;
+}
+
+blockquote {
+  background: #E6EEFB;
+  margin: 0 1.618em 1% 1.618em;
+  padding: 0 1em;
+  text-align: justify;
+  font-weight: 600;
 }
 
 sub,
@@ -217,21 +225,23 @@ header {
 }
 
 #introduction {
-  padding-bottom: 2.618em;
+  margin-bottom: 2.618em;
+  padding-bottom: 1.618em;
+  border-bottom: 1px dashed #A0927E;
 }
 
 #introduction img{
   padding-left: 0;
 }
 
-.table-of-contents {
+#table-of-contents {
   position:fixed;
   margin: 1% 0 ;
   width: 16.776%;
   max-width: 14.125em;
 }
 
-.table-of-contents h2 {
+#table-of-contents h2 {
   border: 0;
   font-size: 1.618em;
   background: none;
@@ -270,7 +280,9 @@ footer {
   }
 
   #introduction {
-    padding-bottom: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
   }
 
   #introduction .span_4_of_9 {
@@ -306,19 +318,7 @@ footer {
     -o-transform:      rotate(270deg); 
   }
 
-  .table-of-contents {
-    position: relative;
-    min-width: 100%;
-  }
-
-  .table-of-contents h2{
-    border-top: 1px solid #000000;
-    border-bottom: 1px solid #000000;
-    margin-bottom: 1.6%;
-    background: #F0ECDA;
-  }
-
-  .span_7_of_9 {
+  .span_7_of_9  {
     width: 100%;
     margin: 0 auto auto 0 ;
   }
@@ -335,8 +335,25 @@ footer {
     width: 40%; 
   }
 
+  .span_2_of_9 {
+    display:none; 
+  }
+
   .span_1_of_9 {
     width: 5%; 
+  }
+
+  #table-of-contents {
+    display: block;
+    min-width: 100%;
+    position: static;
+  }
+
+  #table-of-contents h2{
+    border-top: 1px solid #A0927E;
+    border-bottom: 1px solid #A0927E;
+    margin-bottom: 1.6%;
+    background: #F0ECDA;
   }
 
   footer ul {
@@ -372,9 +389,6 @@ footer {
   .span_3_of_9 {
     width: 35%;
   }
-  .span_2_of_9 {
-    width: 100%; 
-  }
   .span_1_of_9 {
     width: 100%; 
   }
@@ -385,6 +399,10 @@ footer {
 
   footer li {
     list-style: none;
+  }
+
+  blockquote {
+    margin: 0 0 1em 0 ;
   }
 }
 
@@ -417,7 +435,7 @@ footer {
     text-align: center;
     top: auto;
     left: auto;
-    padding: 1em 0;
+    padding: 0 0 1em 0;
 
     /* Rotate header from top left corner (not default) */
     -webkit-transform-origin: auto auto;
@@ -440,9 +458,24 @@ footer {
     padding: 1.6% 0;
   }
 
+  body, cite {
+    font-size: 1.5em;
+  }
+
   h2 {
     font-size: 1.618em;
     line-height: 1.5;
+    text-align: center;
+    text-indent: 0;
+    margin: 6.618% 0;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  .subsection {
+    border-bottom: 1px dashed #A0927E;
   }
 
   img {
@@ -452,6 +485,11 @@ footer {
 
   .span_3_of_9 {
     width: 100%;
+  }
+
+  blockquote {
+    font-size: .8em;
+    font-weight: 400;
   }
 
 }
