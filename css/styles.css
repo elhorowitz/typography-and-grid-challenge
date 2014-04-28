@@ -92,6 +92,7 @@ h2{
 }
 
 h3{
+  margin-left: -2.618%;
   font-size: 1.618em;
   padding-top: 1.618%;
 }
@@ -366,6 +367,10 @@ footer {
 
   body {
     width: 95%;
+  }
+
+  h3 {
+    margin-left: 0;
   }
 
   .span_9_of_9 {
