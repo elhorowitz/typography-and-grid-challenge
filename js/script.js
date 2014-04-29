@@ -10,7 +10,7 @@
             //set initial css for table of contents
             tableOfContents.style.position = 'absolute';
             tableOfContents.style.top = 'auto';
-            tableOfContents.style.width = 'auto';
+            tableOfContents.style.width = '20.97%';
 
             //add the scroll functionality
             window.onscroll = function(){
@@ -19,10 +19,12 @@
                 if(document.body.scrollTop > elementPosition){
                     tableOfContents.style.position = 'fixed';
                     tableOfContents.style.top = 0;
+                    tableOfContents.style.width = '16.776%';
 
                 } else {
                     tableOfContents.style.position = 'absolute';
                     tableOfContents.style.top = 'auto';
+                    tableOfContents.style.width = '20.97%';
                 }
             };
         } else {
@@ -37,10 +39,10 @@
         }
     };
 	
-    setJavascript(window.matchMedia('(min-width: 980px)'));
+    setJavascript(window.matchMedia('(min-width: 1060px)'));
 	window.onresize = function() {
         console.log(window.width);
-        setJavascript(window.matchMedia('(min-width: 980px)'));
+        setJavascript(window.matchMedia('(min-width: 1060px)'));
     };
     
 	
