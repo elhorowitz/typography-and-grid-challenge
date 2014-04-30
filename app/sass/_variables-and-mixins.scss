@@ -1,0 +1,41 @@
+$background-primary: #FFFFFF;
+$background-secondary: #F0ECDA;
+$font-primary: #000000;
+$accent-color: #A0927E;
+$body-font: 'Crimson Text', serif;
+$heading-font: 'Alegreya Sans SC', sans-serif;
+$gutter: 1.618%;
+$column-width: (100% - (8 * $gutter)) / 9;
+
+
+@mixin font-hyphens {
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+
+@mixin font-settings($font, $size, $weight, $style) {
+  font-family: $font;
+  font-size: $size;
+  font-style: $style;
+  font-weight: $weight;
+}
+
+@mixin column-width($num) {
+	width: ($column-width * $num) + ($gutter * ($num - 1));
+}
+
+@mixin rotate-header($pivot-x, $pivot-y, $degrees) {
+
+    /* Rotate header from top left corner (not default) */
+    -webkit-transform-origin: $pivot-x $pivot-y;
+       -moz-transform-origin: $pivot-x $pivot-y;
+        -ms-transform-origin: $pivot-x $pivot-y;
+         -o-transform-origin: $pivot-x $pivot-y;
+    
+    -webkit-transform: rotate($degrees); 
+       -moz-transform: rotate($degrees); 
+        -ms-transform: rotate($degrees); 
+         -o-transform: rotate($degrees); 
+}

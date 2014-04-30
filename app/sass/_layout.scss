@@ -1,0 +1,52 @@
+
+/*  General Stylings ======================================================================== */
+
+body {
+    @include font-settings($body-font, 110%, 400, normal);
+
+    background: $background-primary;
+    color: $font-primary;
+    margin: 0 auto;
+    max-width: 62.5em;
+    padding: 1em 0;
+    position:relative;
+    width: 80%;
+}
+
+ul {
+    padding-left: 1em;
+}
+
+li {
+    line-height: 1.5;
+    list-style: disc;
+
+    li { list-style: circle; }
+}
+
+header {
+    left: 43.55%;
+    position: absolute;
+    top: 3%;
+}
+
+figure {
+    margin-bottom: 5%;
+}
+
+img {
+    padding-left: 10%;
+    width: 90%;
+}
+
+footer {
+    background: $background-secondary;
+    border-bottom: 1px solid $accent-color;
+    border-top: 1px solid $accent-color;
+    padding-left: 1.6%;
+}
+
+/* Clearfix class =============================================================================== */
+.clearfix { *zoom: 1; }
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }

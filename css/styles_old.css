@@ -1,0 +1,509 @@
+/* ============================================================================================== */
+/* Reset Styles                                                                                   */
+/* ============================================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* ============================================================================================== */
+/* Base Typographic Styles                                                                        */
+/* ============================================================================================== */
+
+body {
+  font-family: 'Crimson Text', 'serif';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 110%;
+  width: 80%;
+  position:relative;
+  margin: 1.618em auto;
+  max-width: 62.5em;
+}
+
+p {
+  line-height: 1.5;
+  padding: .618em 0;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+
+}
+
+strong {
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
+}
+
+
+cite {
+  font-style: italic;
+  color: #A0927E;
+}
+
+small {
+  font-size: 80%;
+}
+
+figcaption {
+  font-size: 0.9em;
+  text-align: center;
+  font-weight: 200;
+  font-style: italic;
+  line-height: 1em;
+}
+
+a {
+  color: #A0927E;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #CF756E;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Alegreya Sans SC', 'sans-serif';
+  font-weight: 500;
+  text-rendering: optimizelegibility;
+}
+
+h1{
+  font-size: 6.845em;
+  line-height: 0.8em;
+  text-indent: -0.08em;
+  color: #813B36;
+  white-space: nowrap;
+}
+
+h2{
+  font-size: 2.618em;
+  line-height: 1;
+  border-top: 1px solid #A0927E;
+  border-bottom: 1px solid #A0927E;
+  background: #F0ECDA;
+  text-indent: 0.618em;
+}
+
+h3{
+  margin-left: -2.618%;
+  font-size: 1.618em;
+  padding-top: 1.618%;
+}
+
+ul,
+ol {
+  padding: .618em 0 0 1em;
+}
+
+ul ul,
+ol ul {
+  margin-bottom: 0;
+}
+
+li {
+  line-height: 1.5;
+}
+
+blockquote {
+  background: #E6EEFB;
+  margin: 0 1.618em 1% 1.618em;
+  padding: 0 1em;
+  text-align: justify;
+  font-size: .9em;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* ============================================================================================== */
+/* Demo Styles - Do most of your work here.                                                       */
+/* ============================================================================================== */
+
+
+/*  SECTIONS  ============================================================================= */
+
+.section {
+  clear: both;
+  padding: 0;
+  margin: 0 0 1% 0;
+}
+
+/*  GROUPING  ============================================================================= */
+
+
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+/*  GRID COLUMN SETUP   ==================================================================== */
+
+.pics {
+  float: right;
+  display: block;
+  margin: 1% 0 1% 1.6%;
+}
+
+.col {
+  display: inline-block;
+  margin: 1% 0 0 1.6%;
+}
+
+.col:nth-child(-n+2) { margin-left: 0; } /* all browsers except IE6 and lower */
+
+
+/*  GRID OF NINE   ============================================================================= */
+
+
+.span_9_of_9 {
+  width: 100%;
+}
+
+.span_8_of_9 {
+  width: 88.71%;
+}
+
+.span_7_of_9 {
+  width: 77.42%; 
+}
+
+.span_6_of_9 {
+  width: 66.13%; 
+}
+
+.span_5_of_9 {
+  width: 54.84%; 
+}
+
+.span_4_of_9 {
+  width: 43.55%; 
+}
+
+.span_3_of_9 {
+  width: 32.26%;
+}
+
+.span_2_of_9 {
+  width: 20.97%; 
+}
+
+.span_1_of_9 {
+  width: 9.68%; 
+}
+
+header {
+  position: absolute;
+  top: 2%;
+  left: 43.55%;
+}
+
+#introduction {
+  margin-bottom: 2.618em;
+  padding-bottom: 1.618em;
+  border-bottom: 1px dashed #A0927E;
+}
+
+#introduction img{
+  padding-left: 0;
+}
+
+#table-of-contents {
+  position:fixed;
+  margin: 1% 0;
+  /*width: 16.776%; 
+  max-width: 14.125em;*/
+}
+
+#table-of-contents h2 {
+  border: 0;
+  font-size: 1.618em;
+  background: none;
+}
+
+figure {
+  margin-bottom: 5%;
+}
+
+img {
+  width: 90%;
+  padding-left: 10%;
+}
+
+footer {
+  border-top: 1px solid #A0927E;
+  border-bottom: 1px solid #A0927E;
+  background: #F0ECDA;
+  padding-left: 1.6%;
+}
+
+
+/*  BREAK FOR HEADER */
+@media only screen and (max-width: 1210px) {
+  header {
+    top: 0;
+    margin-top:1%;
+  }
+}
+
+/*  BREAK FOR TABLE OF CONTENTS */
+@media only screen and (max-width: 1060px) {
+
+  ul {
+    margin-left: 8%;
+  }
+
+  #introduction {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  #introduction .span_4_of_9 {
+    margin-left: 8em;
+    width: 20em;
+  }
+
+  #introduction img {
+    width: 100%;
+  }
+
+  #introduction .span_5_of_9 {
+    margin: 1.618em auto;
+    width: 100%;
+    float: none;
+  }
+
+  header {
+    /* Abs positioning makes it not take up vert space */ 
+    position: absolute;
+    top: 24em;
+    left: 0;
+
+    /* Rotate header from top left corner (not default) */
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin:    0 0;
+    -ms-transform-origin:     0 0;
+    -o-transform-origin:      0 0;
+    
+    -webkit-transform: rotate(270deg); 
+    -moz-transform:    rotate(270deg); 
+    -ms-transform:     rotate(270deg); 
+    -o-transform:      rotate(270deg); 
+  }
+
+  .span_7_of_9  {
+    width: 100%;
+    margin: 0 auto auto 0 ;
+  }
+
+  .span_8_of_9 {
+    width: 95%; 
+  }
+
+  .span_5_of_9 {
+    width: 60%; 
+  }
+
+  .span_3_of_9 {
+    width: 40%; 
+  }
+
+  .span_2_of_9 {
+    display:none; 
+  }
+
+  .span_1_of_9 {
+    width: 5%; 
+  }
+
+  #table-of-contents {
+    display: block;
+    min-width: 100%;
+    position: static;
+  }
+
+  #table-of-contents h2{
+    border-top: 1px solid #A0927E;
+    border-bottom: 1px solid #A0927E;
+    margin-bottom: 1.6%;
+    background: #F0ECDA;
+  }
+
+  footer ul {
+    margin-left: 1em;
+  }
+
+}
+
+@media only screen and (max-width: 900px) {
+
+  body {
+    width: 95%;
+  }
+
+  h3 {
+    margin-left: 0;
+  }
+
+  .span_9_of_9 {
+    width: 100%; 
+  }
+  .span_8_of_9 {
+    width: 100%; 
+  }
+  .span_7_of_9 {
+    width: 100%; 
+  }
+  .span_6_of_9 {
+    width: 100%; 
+  }
+  .span_5_of_9 {
+    width: 100%; 
+  }
+  .span_4_of_9 {
+    width: 100%; 
+  }
+  .span_3_of_9 {
+    width: 35%;
+  }
+  .span_1_of_9 {
+    width: 100%; 
+  }
+
+  footer ul {
+    margin-left: 0;
+  }
+
+  footer li {
+    list-style: none;
+  }
+
+  blockquote {
+    margin: 0 0 1em 0 ;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+
+  .col {
+    display: block;
+  }
+
+  .pics {
+    float: none;
+    margin-left: 0;
+  }
+
+  #introduction .span_4_of_9 {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    position: relative;
+    margin: auto;
+  }
+
+  #introduction .span_5_of_9 {
+    margin: 0;
+  }
+
+  header {
+    /* Abs positioning makes it not take up vert space */ 
+    position: relative;
+    text-align: center;
+    top: auto;
+    left: auto;
+    padding: 0 0 1em 0;
+
+    /* Rotate header from top left corner (not default) */
+    -webkit-transform-origin: auto auto;
+    -moz-transform-origin:    auto auto;
+    -ms-transform-origin:     auto auto;
+    -o-transform-origin:      auto auto;
+    
+    -webkit-transform: rotate(0deg); 
+    -moz-transform:    rotate(0deg); 
+    -ms-transform:     rotate(0deg); 
+    -o-transform:      rotate(0deg); 
+  }
+
+
+  figure {
+    max-width: 25em;
+    display: block;
+    position: relative;
+    margin: auto;
+    padding: 1.6% 0;
+  }
+
+  body, cite {
+    font-size: 1.5em;
+  }
+
+  h1 {
+    white-space: normal;
+  }
+
+  h2 {
+    font-size: 1.618em;
+    line-height: 1.5;
+    text-align: center;
+    text-indent: 0;
+    margin: 6.618% 0;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  .subsection {
+    border-bottom: 1px dashed #A0927E;
+  }
+
+  img {
+    width:100%;
+    padding:0;
+  }
+
+  .span_3_of_9 {
+    width: 100%;
+  }
+
+  blockquote {
+    font-size: .8em;
+    font-weight: 400;
+  }
+
+}
+
+/* Clearfix class =============================================================================== */
+.clearfix { *zoom: 1; }
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }

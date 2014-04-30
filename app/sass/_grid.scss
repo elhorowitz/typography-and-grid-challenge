@@ -1,0 +1,114 @@
+
+/*  SECTIONS  ============================================================================= */
+
+.section {
+  clear: both;
+  margin: 0;
+  padding: 0 0 $gutter 0; 
+}
+
+/*  GROUPING  ============================================================================= */
+
+
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+/*  GRID COLUMN SETUP   ==================================================================== */
+
+.pics {
+  float: right;
+  display: block;
+  margin-left: $gutter;
+}
+
+.col {
+  display: block;
+  float: left;
+  margin-left: $gutter;
+  padding: $gutter 0;
+}
+
+.col:nth-child(-n+2) { 
+  margin-left: 0; /* all browsers except IE6 and lower */
+} 
+
+
+/*  GRID OF NINE   ============================================================================= */
+
+.span_9_of_9 {
+  @include column-width(9);
+}
+
+.span_8_of_9 {
+  @include column-width(8);
+}
+
+.span_7_of_9 {
+  @include column-width(7);
+}
+
+.span_6_of_9 {
+  @include column-width(6);
+}
+
+.span_5_of_9 {
+  @include column-width(5);
+}
+
+.span_4_of_9 {
+  @include column-width(4);
+}
+
+.span_3_of_9 {
+  @include column-width(3);
+}
+
+.span_2_of_9 {
+  @include column-width(2);
+}
+
+.span_1_of_9 {
+  width: $column-width;
+}
+
+
+/*  Specific Stylings ======================================================================== */
+
+#introduction {
+    border-bottom: 1px dashed $accent-color;
+    margin-bottom: 2.618em;
+    padding-bottom: 1.618em;
+
+    figure { 
+      margin-bottom: 0; 
+    }
+
+    img { 
+      padding-left: 0; 
+    }
+
+    .col {
+      display: inline-block;
+      float: none; 
+  }
+}
+
+#table-of-contents {
+  margin: 1% 0;
+  position:fixed;
+
+  h2 {
+      font-size: 1.618em;
+      background: none;
+      border: 0;
+  }
+}

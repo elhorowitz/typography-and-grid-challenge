@@ -1,0 +1,209 @@
+
+/*  MEDIA QUERIES   ============================================================================= */
+
+
+/*  BREAK FOR HEADER */
+@media only screen and (max-width: 1235px) {
+  header {
+    margin-top: $gutter;
+    top: auto;
+  }
+}
+
+/*  BREAK FOR TABLE OF CONTENTS */
+@media only screen and (max-width: 1060px) {
+
+  ul {
+    margin-left: 8%;
+  }
+
+  #introduction {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  #introduction .span_4_of_9 {
+    margin-left: 8em;
+    width: 20em;
+  }
+
+  #introduction img {
+    width: 100%;
+  }
+
+  #introduction .span_5_of_9 {
+    width: 100%;
+  }
+
+  header {
+    @include rotate-header(0, 0, 270deg);
+
+    /* Abs positioning makes it not take up vert space */ 
+    left: 0;
+    position: absolute;
+    top: 24em;
+  }
+
+  .span_7_of_9  {
+    width: 100%;
+    margin: 0 auto auto 0;
+  }
+
+  .span_8_of_9 {
+    width: 95%; 
+  }
+
+  .span_5_of_9 {
+    width: 60%; 
+  }
+
+  .span_3_of_9 {
+    width: 40%; 
+  }
+
+  .span_2_of_9 {
+    display:none; 
+  }
+
+  .span_1_of_9 {
+    width: 5%; 
+  }
+
+  #table-of-contents {
+    display: block;
+    width: 100%;
+    position: static;
+  
+    h2{
+      background: $background-secondary;
+      border-bottom: 1px solid $accent-color;
+      border-top: 1px solid $accent-color;
+      padding-left: 1.6%;
+    }
+
+    ul { padding-top: 1em; ul { padding-top: 0; } }
+  }
+
+  footer ul {
+    margin-left: $gutter;
+  }
+
+}
+
+/* BREAK TO FULL COLUMN DIVS*/
+@media only screen and (max-width: 900px) {
+
+  body {
+    width: 95%;
+  }
+
+  h3 {
+    margin-left: 0;
+  }
+
+  .span_8_of_9, .span_7_of_9, .span_6_of_9, .span_5_of_9, .span_4_of_9, .span_1_of_9 {
+    width: 100%; 
+  }
+
+  .span_3_of_9 {
+    width: 35%;
+  }
+  
+  footer ul {
+    margin-left: 0;
+  }
+
+  footer li {
+    list-style: none;
+  }
+
+  blockquote {
+    margin-left: $gutter;
+  }
+}
+
+/* BREAK FOR SMALL SCREENS */
+@media only screen and (max-width: 520px) {
+
+  .col {
+    display: block;
+  }
+
+  .pics {
+    float: none;
+    margin-left: 0;
+  }
+
+  #introduction .span_4_of_9 {
+    display: block;
+    margin: auto;
+    max-width: 400px;
+    position: relative;
+    width: 100%;
+    
+  }
+
+  #introduction .span_5_of_9 {
+    margin: 0;
+  }
+
+  header {
+    @include rotate-header(auto, auto, 0deg); 
+    
+    /* Abs positioning makes it not take up vert space */ 
+    left: auto;
+    padding: 0 0 1em 0;
+    position: relative;
+    text-align: center;
+    top: auto;
+  }
+
+
+  figure {
+    display: block;
+    margin: auto;
+    max-width: 25em;
+    padding: 1.6% 0;
+    position: relative;
+  }
+
+  body, cite {
+    font-size: 1.5em;
+  }
+
+  h1 {
+    white-space: normal;
+  }
+
+  h2 {
+    font-size: 1.618em;
+    line-height: 1.5;
+    margin: 6.618% 0;
+    text-align: center;
+    text-indent: 0;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  .subsection {
+    border-bottom: 1px dashed $accent-color;
+  }
+
+  img {
+    padding:0;
+    width:100%;
+  }
+
+  .span_3_of_9 {
+    width: 100%;
+  }
+
+  blockquote {
+    font-size: .8em;
+    font-weight: 400;
+  }
+
+}

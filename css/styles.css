@@ -1,125 +1,237 @@
+/* CSS5 */
+/* line 2, ../app/sass/_reset.scss */
+header, footer, h2, article, section, hgroup, nav, figure {
+  display: block;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset */
+/* line 5, ../app/sass/_reset.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h1, h2, h3, h5, h6, hr, p, input, textarea, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, h2, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 5, ../app/sass/_reset.scss */
+article, aside, details, figcaption, figure, footer, h2, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 5, ../app/sass/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 5, ../app/sass/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 5, ../app/sass/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 5, ../app/sass/_reset.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none;
+}
+
+/* line 5, ../app/sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 5, ../app/sass/_reset.scss */
+:focus {
+  outline: none;
+}
+
+/* line 5, ../app/sass/_reset.scss */
+::-moz-focus-inner {
+  border: 0;
+}
+
 /* ============================================================================================== */
 /* Reset Styles                                                                                   */
 /* ============================================================================================== */
+/* line 10, ../app/sass/_reset.scss */
 * {
-  margin: 0;
-  padding: 0;
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-/* ============================================================================================== */
-/* Base Typographic Styles                                                                        */
-/* ============================================================================================== */
-
+/*  General Stylings ======================================================================== */
+/* line 4, ../app/sass/_layout.scss */
 body {
-  font-family: 'Crimson Text', 'serif';
-  font-weight: 400;
-  font-style: normal;
+  font-family: "Crimson Text", serif;
   font-size: 110%;
-  width: 80%;
-  position:relative;
-  margin: 1.618em auto;
+  font-style: normal;
+  font-weight: 400;
+  background: white;
+  color: black;
+  margin: 0 auto;
   max-width: 62.5em;
+  padding: 1em 0;
+  position: relative;
+  width: 80%;
 }
 
-p {
+/* line 16, ../app/sass/_layout.scss */
+ul {
+  padding-left: 1em;
+}
+
+/* line 20, ../app/sass/_layout.scss */
+li {
   line-height: 1.5;
-  padding: .618em 0;
-  -webkit-hyphens: auto;
-     -moz-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-
+  list-style: disc;
+}
+/* line 24, ../app/sass/_layout.scss */
+li li {
+  list-style: circle;
 }
 
-strong {
-  font-weight: 600;
+/* line 27, ../app/sass/_layout.scss */
+header {
+  left: 43.55%;
+  position: absolute;
+  top: 3%;
 }
 
-em {
-  font-style: italic;
+/* line 33, ../app/sass/_layout.scss */
+figure {
+  margin-bottom: 5%;
 }
 
-
-cite {
-  font-style: italic;
-  color: #A0927E;
+/* line 37, ../app/sass/_layout.scss */
+img {
+  padding-left: 10%;
+  width: 90%;
 }
 
-small {
-  font-size: 80%;
+/* line 42, ../app/sass/_layout.scss */
+footer, h2 {
+  background: #f0ecda;
+  border-bottom: 1px solid #a0927e;
+  border-top: 1px solid #a0927e;
+  padding-left: 1.6%;
 }
 
-figcaption {
-  font-size: 0.9em;
-  text-align: center;
-  font-weight: 200;
-  font-style: italic;
-  line-height: 1em;
+/* Clearfix class =============================================================================== */
+/* line 50, ../app/sass/_layout.scss */
+.clearfix {
+  *zoom: 1;
 }
 
-a {
-  color: #A0927E;
-  text-decoration: none;
+/* line 51, ../app/sass/_layout.scss */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
 }
 
-a:hover {
-  color: #CF756E;
+/* line 52, ../app/sass/_layout.scss */
+.clearfix:after {
+  clear: both;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Alegreya Sans SC', 'sans-serif';
+/*  Typography ======================================================================== */
+/* line 4, ../app/sass/_typography.scss */
+h4, h1, h2, h3 {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 110%;
+  font-style: normal;
   font-weight: 500;
   text-rendering: optimizelegibility;
 }
 
-h1{
+/* line 9, ../app/sass/_typography.scss */
+h1 {
+  color: #813B36;
   font-size: 6.845em;
   line-height: 0.8em;
   text-indent: -0.08em;
-  color: #813B36;
   white-space: nowrap;
 }
 
-h2{
+/* line 19, ../app/sass/_typography.scss */
+h2 {
   font-size: 2.618em;
   line-height: 1;
-  border-top: 1px solid #A0927E;
-  border-bottom: 1px solid #A0927E;
-  background: #F0ECDA;
-  text-indent: 0.618em;
 }
 
-h3{
-  margin-left: -2.618%;
+/* line 27, ../app/sass/_typography.scss */
+h3 {
   font-size: 1.618em;
-  padding-top: 1.618%;
+  margin-left: -2.618%;
 }
 
-ul,
-ol {
-  padding: .618em 0 0 1em;
-}
-
-ul ul,
-ol ul {
-  margin-bottom: 0;
-}
-
-li {
+/* line 34, ../app/sass/_typography.scss */
+p {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
   line-height: 1.5;
+  padding: .618em 0;
 }
 
+/* line 41, ../app/sass/_typography.scss */
+strong {
+  font-weight: 600;
+}
+
+/* line 45, ../app/sass/_typography.scss */
+em {
+  font-style: italic;
+}
+
+/* line 49, ../app/sass/_typography.scss */
+cite {
+  color: #a0927e;
+  font-style: italic;
+}
+
+/* line 54, ../app/sass/_typography.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 58, ../app/sass/_typography.scss */
+figcaption {
+  font-family: "Crimson Text", serif;
+  font-size: 80%;
+  font-style: italic;
+  font-weight: 200;
+  line-height: 1em;
+  text-align: center;
+}
+
+/* line 64, ../app/sass/_typography.scss */
+a {
+  color: #a0927e;
+  text-decoration: none;
+}
+/* line 68, ../app/sass/_typography.scss */
+a:hover {
+  color: #CF756E;
+}
+
+/* line 73, ../app/sass/_typography.scss */
 blockquote {
   background: #E6EEFB;
+  font-size: .9em;
   margin: 0 1.618em 1% 1.618em;
   padding: 0 1em;
   text-align: justify;
-  font-size: .9em;
 }
 
+/* line 81, ../app/sass/_typography.scss */
 sub,
 sup {
   font-size: 75%;
@@ -128,382 +240,393 @@ sup {
   vertical-align: baseline;
 }
 
+/* line 89, ../app/sass/_typography.scss */
 sup {
   top: -0.5em;
 }
 
+/* line 93, ../app/sass/_typography.scss */
 sub {
   bottom: -0.25em;
 }
 
-/* ============================================================================================== */
-/* Demo Styles - Do most of your work here.                                                       */
-/* ============================================================================================== */
-
-
 /*  SECTIONS  ============================================================================= */
-
+/* line 4, ../app/sass/_grid.scss */
 .section {
   clear: both;
-  padding: 0;
-  margin: 0 0 1% 0;
+  margin: 0;
+  padding: 0 0 1.618% 0;
 }
 
 /*  GROUPING  ============================================================================= */
-
-
+/* line 13, ../app/sass/_grid.scss */
 .group:before,
 .group:after {
-    content:"";
-    display:table;
+  content: "";
+  display: table;
 }
+
+/* line 18, ../app/sass/_grid.scss */
 .group:after {
-    clear:both;
+  clear: both;
 }
+
+/* line 21, ../app/sass/_grid.scss */
 .group {
-    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */
 }
 
 /*  GRID COLUMN SETUP   ==================================================================== */
-
+/* line 27, ../app/sass/_grid.scss */
 .pics {
   float: right;
   display: block;
-  margin: 1% 0 1% 1.6%;
+  margin-left: 1.618%;
 }
 
+/* line 33, ../app/sass/_grid.scss */
 .col {
-  display: inline-block;
-  margin: 1% 0 0 1.6%;
+  display: block;
+  float: left;
+  margin-left: 1.618%;
+  padding: 1.618% 0;
 }
 
-.col:nth-child(-n+2) { margin-left: 0; } /* all browsers except IE6 and lower */
-
+/* line 40, ../app/sass/_grid.scss */
+.col:nth-child(-n+2) {
+  margin-left: 0;
+  /* all browsers except IE6 and lower */
+}
 
 /*  GRID OF NINE   ============================================================================= */
-
-
+/* line 47, ../app/sass/_grid.scss */
 .span_9_of_9 {
   width: 100%;
 }
 
+/* line 51, ../app/sass/_grid.scss */
 .span_8_of_9 {
-  width: 88.71%;
+  width: 88.70911%;
 }
 
+/* line 55, ../app/sass/_grid.scss */
 .span_7_of_9 {
-  width: 77.42%; 
+  width: 77.41822%;
 }
 
+/* line 59, ../app/sass/_grid.scss */
 .span_6_of_9 {
-  width: 66.13%; 
+  width: 66.12733%;
 }
 
+/* line 63, ../app/sass/_grid.scss */
 .span_5_of_9 {
-  width: 54.84%; 
+  width: 54.83644%;
 }
 
+/* line 67, ../app/sass/_grid.scss */
 .span_4_of_9 {
-  width: 43.55%; 
+  width: 43.54556%;
 }
 
+/* line 71, ../app/sass/_grid.scss */
 .span_3_of_9 {
-  width: 32.26%;
+  width: 32.25467%;
 }
 
+/* line 75, ../app/sass/_grid.scss */
 .span_2_of_9 {
-  width: 20.97%; 
+  width: 20.96378%;
 }
 
+/* line 79, ../app/sass/_grid.scss */
 .span_1_of_9 {
-  width: 9.68%; 
+  width: 9.67289%;
 }
 
-header {
-  position: absolute;
-  top: 2%;
-  left: 43.55%;
-}
-
+/*  Specific Stylings ======================================================================== */
+/* line 86, ../app/sass/_grid.scss */
 #introduction {
+  border-bottom: 1px dashed #a0927e;
   margin-bottom: 2.618em;
   padding-bottom: 1.618em;
-  border-bottom: 1px dashed #A0927E;
 }
-
-#introduction img{
+/* line 91, ../app/sass/_grid.scss */
+#introduction figure {
+  margin-bottom: 0;
+}
+/* line 95, ../app/sass/_grid.scss */
+#introduction img {
   padding-left: 0;
 }
-
-#table-of-contents {
-  position:fixed;
-  margin: 1% 0;
-  /*width: 16.776%; 
-  max-width: 14.125em;*/
+/* line 99, ../app/sass/_grid.scss */
+#introduction .col {
+  display: inline-block;
+  float: none;
 }
 
+/* line 105, ../app/sass/_grid.scss */
+#table-of-contents {
+  margin: 1% 0;
+  position: fixed;
+}
+/* line 109, ../app/sass/_grid.scss */
 #table-of-contents h2 {
-  border: 0;
   font-size: 1.618em;
   background: none;
+  border: 0;
 }
 
-figure {
-  margin-bottom: 5%;
-}
-
-img {
-  width: 90%;
-  padding-left: 10%;
-}
-
-footer {
-  border-top: 1px solid #A0927E;
-  border-bottom: 1px solid #A0927E;
-  background: #F0ECDA;
-  padding-left: 1.6%;
-}
-
-
+/*  MEDIA QUERIES   ============================================================================= */
 /*  BREAK FOR HEADER */
-@media only screen and (max-width: 1210px) {
+@media only screen and (max-width: 1235px) {
+  /* line 7, ../app/sass/_media-queries.scss */
   header {
-    top: 0;
-    margin-top:1%;
+    margin-top: 1.618%;
+    top: auto;
   }
 }
-
 /*  BREAK FOR TABLE OF CONTENTS */
 @media only screen and (max-width: 1060px) {
-
+  /* line 16, ../app/sass/_media-queries.scss */
   ul {
     margin-left: 8%;
   }
 
+  /* line 20, ../app/sass/_media-queries.scss */
   #introduction {
+    border: 0;
     margin: 0;
     padding: 0;
-    border: 0;
   }
 
+  /* line 26, ../app/sass/_media-queries.scss */
   #introduction .span_4_of_9 {
     margin-left: 8em;
     width: 20em;
   }
 
+  /* line 31, ../app/sass/_media-queries.scss */
   #introduction img {
     width: 100%;
   }
 
+  /* line 35, ../app/sass/_media-queries.scss */
   #introduction .span_5_of_9 {
-    margin: 1.618em auto;
     width: 100%;
-    float: none;
   }
 
+  /* line 39, ../app/sass/_media-queries.scss */
   header {
-    /* Abs positioning makes it not take up vert space */ 
-    position: absolute;
-    top: 24em;
-    left: 0;
-
     /* Rotate header from top left corner (not default) */
     -webkit-transform-origin: 0 0;
-    -moz-transform-origin:    0 0;
-    -ms-transform-origin:     0 0;
-    -o-transform-origin:      0 0;
-    
-    -webkit-transform: rotate(270deg); 
-    -moz-transform:    rotate(270deg); 
-    -ms-transform:     rotate(270deg); 
-    -o-transform:      rotate(270deg); 
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    /* Abs positioning makes it not take up vert space */
+    left: 0;
+    position: absolute;
+    top: 24em;
   }
 
-  .span_7_of_9  {
+  /* line 48, ../app/sass/_media-queries.scss */
+  .span_7_of_9 {
     width: 100%;
-    margin: 0 auto auto 0 ;
+    margin: 0 auto auto 0;
   }
 
+  /* line 53, ../app/sass/_media-queries.scss */
   .span_8_of_9 {
-    width: 95%; 
+    width: 95%;
   }
 
+  /* line 57, ../app/sass/_media-queries.scss */
   .span_5_of_9 {
-    width: 60%; 
+    width: 60%;
   }
 
+  /* line 61, ../app/sass/_media-queries.scss */
   .span_3_of_9 {
-    width: 40%; 
+    width: 40%;
   }
 
+  /* line 65, ../app/sass/_media-queries.scss */
   .span_2_of_9 {
-    display:none; 
+    display: none;
   }
 
+  /* line 69, ../app/sass/_media-queries.scss */
   .span_1_of_9 {
-    width: 5%; 
+    width: 5%;
   }
 
+  /* line 73, ../app/sass/_media-queries.scss */
   #table-of-contents {
     display: block;
-    min-width: 100%;
+    width: 100%;
     position: static;
   }
-
-  #table-of-contents h2{
-    border-top: 1px solid #A0927E;
-    border-bottom: 1px solid #A0927E;
-    margin-bottom: 1.6%;
-    background: #F0ECDA;
+  /* line 78, ../app/sass/_media-queries.scss */
+  #table-of-contents h2 {
+    background: #f0ecda;
+    border-bottom: 1px solid #a0927e;
+    border-top: 1px solid #a0927e;
+    padding-left: 1.6%;
+  }
+  /* line 85, ../app/sass/_media-queries.scss */
+  #table-of-contents ul {
+    padding-top: 1em;
+  }
+  /* line 85, ../app/sass/_media-queries.scss */
+  #table-of-contents ul ul {
+    padding-top: 0;
   }
 
-  footer ul {
-    margin-left: 1em;
+  /* line 88, ../app/sass/_media-queries.scss */
+  footer ul, h2 ul {
+    margin-left: 1.618%;
   }
-
 }
-
+/* BREAK TO FULL COLUMN DIVS*/
 @media only screen and (max-width: 900px) {
-
+  /* line 97, ../app/sass/_media-queries.scss */
   body {
     width: 95%;
   }
 
+  /* line 101, ../app/sass/_media-queries.scss */
   h3 {
     margin-left: 0;
   }
 
-  .span_9_of_9 {
-    width: 100%; 
+  /* line 105, ../app/sass/_media-queries.scss */
+  .span_8_of_9, .span_7_of_9, .span_6_of_9, .span_5_of_9, .span_4_of_9, .span_1_of_9 {
+    width: 100%;
   }
-  .span_8_of_9 {
-    width: 100%; 
-  }
-  .span_7_of_9 {
-    width: 100%; 
-  }
-  .span_6_of_9 {
-    width: 100%; 
-  }
-  .span_5_of_9 {
-    width: 100%; 
-  }
-  .span_4_of_9 {
-    width: 100%; 
-  }
+
+  /* line 109, ../app/sass/_media-queries.scss */
   .span_3_of_9 {
     width: 35%;
   }
-  .span_1_of_9 {
-    width: 100%; 
-  }
 
-  footer ul {
+  /* line 113, ../app/sass/_media-queries.scss */
+  footer ul, h2 ul {
     margin-left: 0;
   }
 
-  footer li {
+  /* line 117, ../app/sass/_media-queries.scss */
+  footer li, h2 li {
     list-style: none;
   }
 
+  /* line 121, ../app/sass/_media-queries.scss */
   blockquote {
-    margin: 0 0 1em 0 ;
+    margin-left: 1.618%;
   }
 }
-
+/* BREAK FOR SMALL SCREENS */
 @media only screen and (max-width: 520px) {
-
+  /* line 129, ../app/sass/_media-queries.scss */
   .col {
     display: block;
   }
 
+  /* line 133, ../app/sass/_media-queries.scss */
   .pics {
     float: none;
     margin-left: 0;
   }
 
+  /* line 138, ../app/sass/_media-queries.scss */
   #introduction .span_4_of_9 {
-    width: 100%;
-    max-width: 400px;
     display: block;
-    position: relative;
     margin: auto;
+    max-width: 400px;
+    position: relative;
+    width: 100%;
   }
 
+  /* line 147, ../app/sass/_media-queries.scss */
   #introduction .span_5_of_9 {
     margin: 0;
   }
 
+  /* line 151, ../app/sass/_media-queries.scss */
   header {
-    /* Abs positioning makes it not take up vert space */ 
+    /* Rotate header from top left corner (not default) */
+    -webkit-transform-origin: auto auto;
+    -moz-transform-origin: auto auto;
+    -ms-transform-origin: auto auto;
+    -o-transform-origin: auto auto;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    /* Abs positioning makes it not take up vert space */
+    left: auto;
+    padding: 0 0 1em 0;
     position: relative;
     text-align: center;
     top: auto;
-    left: auto;
-    padding: 0 0 1em 0;
-
-    /* Rotate header from top left corner (not default) */
-    -webkit-transform-origin: auto auto;
-    -moz-transform-origin:    auto auto;
-    -ms-transform-origin:     auto auto;
-    -o-transform-origin:      auto auto;
-    
-    -webkit-transform: rotate(0deg); 
-    -moz-transform:    rotate(0deg); 
-    -ms-transform:     rotate(0deg); 
-    -o-transform:      rotate(0deg); 
   }
 
-
+  /* line 163, ../app/sass/_media-queries.scss */
   figure {
-    max-width: 25em;
     display: block;
-    position: relative;
     margin: auto;
+    max-width: 25em;
     padding: 1.6% 0;
+    position: relative;
   }
 
+  /* line 171, ../app/sass/_media-queries.scss */
   body, cite {
     font-size: 1.5em;
   }
 
+  /* line 175, ../app/sass/_media-queries.scss */
   h1 {
     white-space: normal;
   }
 
+  /* line 179, ../app/sass/_media-queries.scss */
   h2 {
     font-size: 1.618em;
     line-height: 1.5;
+    margin: 6.618% 0;
     text-align: center;
     text-indent: 0;
-    margin: 6.618% 0;
   }
 
+  /* line 187, ../app/sass/_media-queries.scss */
   h3 {
     font-size: 1.5em;
   }
 
+  /* line 191, ../app/sass/_media-queries.scss */
   .subsection {
-    border-bottom: 1px dashed #A0927E;
+    border-bottom: 1px dashed #a0927e;
   }
 
+  /* line 195, ../app/sass/_media-queries.scss */
   img {
-    width:100%;
-    padding:0;
+    padding: 0;
+    width: 100%;
   }
 
+  /* line 200, ../app/sass/_media-queries.scss */
   .span_3_of_9 {
     width: 100%;
   }
 
+  /* line 204, ../app/sass/_media-queries.scss */
   blockquote {
     font-size: .8em;
     font-weight: 400;
   }
-
 }
-
-/* Clearfix class =============================================================================== */
-.clearfix { *zoom: 1; }
-.clearfix:before, .clearfix:after { content: " "; display: table; }
-.clearfix:after { clear: both; }
