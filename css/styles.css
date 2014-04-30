@@ -370,8 +370,9 @@ sub {
 #table-of-contents {
   margin: 1% 0;
   position: fixed;
+  max-width: 13.1em;
 }
-/* line 109, ../app/sass/_grid.scss */
+/* line 110, ../app/sass/_grid.scss */
 #table-of-contents h2 {
   font-size: 1.618em;
   background: none;
