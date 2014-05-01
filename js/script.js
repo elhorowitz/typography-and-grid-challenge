@@ -11,6 +11,7 @@
             tableOfContents.style.position = 'absolute';
             tableOfContents.style.top = 'auto';
             tableOfContents.style.width = '20.97%';
+            tableOfContents.style.maxWidth = '13.1em';
 
             //add the scroll functionality
             window.onscroll = function(){
