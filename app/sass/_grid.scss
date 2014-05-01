@@ -10,16 +10,18 @@
 /*  GROUPING  ============================================================================= */
 
 
-.group:before,
-.group:after {
-    content:"";
-    display:table;
-}
-.group:after {
-    clear:both;
-}
 .group {
     zoom:1; /* For IE 6/7 (trigger hasLayout) */
+
+    &:before {
+      content:"";
+      display:table;
+    }
+
+    &:after {
+      @extend :before;
+      clear:both;
+    }
 }
 
 /*  GRID COLUMN SETUP   ==================================================================== */
@@ -98,7 +100,10 @@
 
     .col {
       display: inline-block;
+      display: -moz-inline-stack;
       float: none; 
+      zoom: 1;
+      *display: inline;
   }
 }
 

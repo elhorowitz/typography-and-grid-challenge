@@ -36,6 +36,8 @@
 
             //make sure the table of contents takes up an actual block on the page
             document.getElementById('table-of-contents').style.position = 'static';
+            document.getElementById('table-of-contents').style.width = '100%';
+            document.getElementById('table-of-contents').style.maxWidth = '100%';
         }
     };
 	

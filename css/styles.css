@@ -36,7 +36,7 @@ blockquote, q {
 }
 
 /* line 5, ../app/sass/_reset.scss */
-blockquote:before, blockquote:after, q:before, q:after {
+blockquote:before, blockquote.group:after, blockquote:after, q:before, q.group:after, q:after {
   content: none;
 }
 
@@ -130,7 +130,7 @@ footer, h2 {
 }
 
 /* line 51, ../app/sass/_layout.scss */
-.clearfix:before, .clearfix:after {
+.clearfix:before, .clearfix.group:after, .clearfix:after {
   content: " ";
   display: table;
 }
@@ -260,32 +260,29 @@ sub {
 
 /*  GROUPING  ============================================================================= */
 /* line 13, ../app/sass/_grid.scss */
-.group:before,
-.group:after {
-  content: "";
-  display: table;
-}
-
-/* line 18, ../app/sass/_grid.scss */
-.group:after {
-  clear: both;
-}
-
-/* line 21, ../app/sass/_grid.scss */
 .group {
   zoom: 1;
   /* For IE 6/7 (trigger hasLayout) */
 }
+/* line 16, ../app/sass/_grid.scss */
+.group:before, .group:after {
+  content: "";
+  display: table;
+}
+/* line 21, ../app/sass/_grid.scss */
+.group:after {
+  clear: both;
+}
 
 /*  GRID COLUMN SETUP   ==================================================================== */
-/* line 27, ../app/sass/_grid.scss */
+/* line 29, ../app/sass/_grid.scss */
 .pics {
   float: right;
   display: block;
   margin-left: 1.618%;
 }
 
-/* line 33, ../app/sass/_grid.scss */
+/* line 35, ../app/sass/_grid.scss */
 .col {
   display: block;
   float: left;
@@ -293,86 +290,89 @@ sub {
   padding: 1.618% 0;
 }
 
-/* line 40, ../app/sass/_grid.scss */
+/* line 42, ../app/sass/_grid.scss */
 .col:nth-child(-n+2) {
   margin-left: 0;
   /* all browsers except IE6 and lower */
 }
 
 /*  GRID OF NINE   ============================================================================= */
-/* line 47, ../app/sass/_grid.scss */
+/* line 49, ../app/sass/_grid.scss */
 .span_9_of_9 {
   width: 100%;
 }
 
-/* line 51, ../app/sass/_grid.scss */
+/* line 53, ../app/sass/_grid.scss */
 .span_8_of_9 {
   width: 88.70911%;
 }
 
-/* line 55, ../app/sass/_grid.scss */
+/* line 57, ../app/sass/_grid.scss */
 .span_7_of_9 {
   width: 77.41822%;
 }
 
-/* line 59, ../app/sass/_grid.scss */
+/* line 61, ../app/sass/_grid.scss */
 .span_6_of_9 {
   width: 66.12733%;
 }
 
-/* line 63, ../app/sass/_grid.scss */
+/* line 65, ../app/sass/_grid.scss */
 .span_5_of_9 {
   width: 54.83644%;
 }
 
-/* line 67, ../app/sass/_grid.scss */
+/* line 69, ../app/sass/_grid.scss */
 .span_4_of_9 {
   width: 43.54556%;
 }
 
-/* line 71, ../app/sass/_grid.scss */
+/* line 73, ../app/sass/_grid.scss */
 .span_3_of_9 {
   width: 32.25467%;
 }
 
-/* line 75, ../app/sass/_grid.scss */
+/* line 77, ../app/sass/_grid.scss */
 .span_2_of_9 {
   width: 20.96378%;
 }
 
-/* line 79, ../app/sass/_grid.scss */
+/* line 81, ../app/sass/_grid.scss */
 .span_1_of_9 {
   width: 9.67289%;
 }
 
 /*  Specific Stylings ======================================================================== */
-/* line 86, ../app/sass/_grid.scss */
+/* line 88, ../app/sass/_grid.scss */
 #introduction {
   border-bottom: 1px dashed #a0927e;
   margin-bottom: 2.618em;
   padding-bottom: 1.618em;
 }
-/* line 91, ../app/sass/_grid.scss */
+/* line 93, ../app/sass/_grid.scss */
 #introduction figure {
   margin-bottom: 0;
 }
-/* line 95, ../app/sass/_grid.scss */
+/* line 97, ../app/sass/_grid.scss */
 #introduction img {
   padding-left: 0;
 }
-/* line 99, ../app/sass/_grid.scss */
+/* line 101, ../app/sass/_grid.scss */
 #introduction .col {
   display: inline-block;
+  display: -moz-inline-stack;
   float: none;
+  zoom: 1;
+  *display: inline;
 }
 
-/* line 105, ../app/sass/_grid.scss */
+/* line 110, ../app/sass/_grid.scss */
 #table-of-contents {
   margin: 1% 0;
   position: fixed;
   max-width: 13.1em;
 }
-/* line 110, ../app/sass/_grid.scss */
+/* line 115, ../app/sass/_grid.scss */
 #table-of-contents h2 {
   font-size: 1.618em;
   background: none;
@@ -401,19 +401,16 @@ sub {
     margin: 0;
     padding: 0;
   }
-
-  /* line 26, ../app/sass/_media-queries.scss */
+  /* line 25, ../app/sass/_media-queries.scss */
+  #introduction img {
+    width: 100%;
+  }
+  /* line 29, ../app/sass/_media-queries.scss */
   #introduction .span_4_of_9 {
     margin-left: 8em;
     width: 20em;
   }
-
-  /* line 31, ../app/sass/_media-queries.scss */
-  #introduction img {
-    width: 100%;
-  }
-
-  /* line 35, ../app/sass/_media-queries.scss */
+  /* line 34, ../app/sass/_media-queries.scss */
   #introduction .span_5_of_9 {
     width: 100%;
   }
@@ -543,7 +540,7 @@ sub {
     margin-left: 0;
   }
 
-  /* line 138, ../app/sass/_media-queries.scss */
+  /* line 140, ../app/sass/_media-queries.scss */
   #introduction .span_4_of_9 {
     display: block;
     margin: auto;
@@ -551,13 +548,12 @@ sub {
     position: relative;
     width: 100%;
   }
-
-  /* line 147, ../app/sass/_media-queries.scss */
+  /* line 148, ../app/sass/_media-queries.scss */
   #introduction .span_5_of_9 {
     margin: 0;
   }
 
-  /* line 151, ../app/sass/_media-queries.scss */
+  /* line 153, ../app/sass/_media-queries.scss */
   header {
     /* Rotate header from top left corner (not default) */
     -webkit-transform-origin: auto auto;
@@ -576,7 +572,7 @@ sub {
     top: auto;
   }
 
-  /* line 163, ../app/sass/_media-queries.scss */
+  /* line 165, ../app/sass/_media-queries.scss */
   figure {
     display: block;
     margin: auto;
@@ -585,17 +581,17 @@ sub {
     position: relative;
   }
 
-  /* line 171, ../app/sass/_media-queries.scss */
+  /* line 173, ../app/sass/_media-queries.scss */
   body, cite {
     font-size: 1.5em;
   }
 
-  /* line 175, ../app/sass/_media-queries.scss */
+  /* line 177, ../app/sass/_media-queries.scss */
   h1 {
     white-space: normal;
   }
 
-  /* line 179, ../app/sass/_media-queries.scss */
+  /* line 181, ../app/sass/_media-queries.scss */
   h2 {
     font-size: 1.618em;
     line-height: 1.5;
@@ -604,28 +600,28 @@ sub {
     text-indent: 0;
   }
 
-  /* line 187, ../app/sass/_media-queries.scss */
+  /* line 189, ../app/sass/_media-queries.scss */
   h3 {
     font-size: 1.5em;
   }
 
-  /* line 191, ../app/sass/_media-queries.scss */
+  /* line 193, ../app/sass/_media-queries.scss */
   .subsection {
     border-bottom: 1px dashed #a0927e;
   }
 
-  /* line 195, ../app/sass/_media-queries.scss */
+  /* line 197, ../app/sass/_media-queries.scss */
   img {
     padding: 0;
     width: 100%;
   }
 
-  /* line 200, ../app/sass/_media-queries.scss */
+  /* line 202, ../app/sass/_media-queries.scss */
   .span_3_of_9 {
     width: 100%;
   }
 
-  /* line 204, ../app/sass/_media-queries.scss */
+  /* line 206, ../app/sass/_media-queries.scss */
   blockquote {
     font-size: .8em;
     font-weight: 400;

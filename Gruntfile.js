@@ -103,7 +103,6 @@ module.exports = function(grunt) {
     grunt.registerTask('build', [
         'imagemin',
         'sass',
-        'concat',
         'jshint',
         'uglify'
     ]);
